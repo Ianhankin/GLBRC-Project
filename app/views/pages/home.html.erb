@@ -1,9 +1,11 @@
-<h1>Home Page</h1>
+<h1 class="center">Home Page</h1>
 <div class="apps">
   <% Preference.all.each do |p|%>
     <%if p.user_id==current_user.id && p.active%>
-      <span><%=p.application.description%></span>
-      <%=link_to p.application.name, p.application.link%>
+      <div class="app_box" style=<%="background-color:#{p.application.color.downcase}"%>>
+        <div class="description center"><%=p.application.description%></div>
+        <div class="link center"><%=link_to p.application.name, p.application.link%></div>
+      </div>
     <%end%>
   <% end %>
 </div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'preferences/edit'
+
   get 'sessions/new'
 
   get '/home', to: "pages#home"

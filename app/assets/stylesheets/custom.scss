@@ -29,3 +29,13 @@ input, textarea, select{
   width: 100%;
   @include box_sizing;
 }
+
+.app_box{
+  width: 25%;
+  border: 2px solid #bbb;
+  @include box_sizing
+}
+
+.apps{
+  display: flex;
+}
