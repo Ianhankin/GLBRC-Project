@@ -22,8 +22,9 @@ Application.create!(name: "WEI", description: "Wisconsin Energy Institute",
 Application.create!(name: "Twitter", description: "Twitter", color: "Purple",
   default: false, link: "https://twitter.com/")
   
-int i = 1
+
 User.all.each do |user|
+  int i = 1
   Application.all.each do |app|
     Preference.create(user_id: user.id, application_id: app.id, active: app.default, position: i)
     i=i+1

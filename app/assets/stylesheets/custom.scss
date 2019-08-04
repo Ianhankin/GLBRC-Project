@@ -3,10 +3,16 @@
 
 body{
     padding-top: 80px;
+    background-color: tan;
 }
 
 .center{
     text-align: center;
+}
+
+.right{
+  display: flex;
+  justify-content: flex-end;
 }
 
 h1{
@@ -31,6 +37,7 @@ input, textarea, select{
 }
 
 .app_box{
+  padding: 40px;
   width: 25%;
   border: 2px solid #bbb;
   @include box_sizing
@@ -38,4 +45,14 @@ input, textarea, select{
 
 .apps{
   display: flex;
+  flex-wrap: wrap;
+}
+
+.description,.link,.activation{
+  color: white;
+  text-shadow: 
+    -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }

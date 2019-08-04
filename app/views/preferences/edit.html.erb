@@ -1,2 +1,17 @@
+<div class="btn right"><%=link_to 'Return to Home', home_path%></div>
 <h1 class="center">Preferences</h1>
-
+<div class="apps">
+  <% Preference.all.each do |p|%>
+    <%if p.user_id==current_user.id%>
+      <div class="app_box" style=<%="background-color:#{p.application.color.downcase}"%>>
+        <%if p.active%>
+            <div class="activation right"><%=link_to 'Deactivate', preferences_update_path(id: p.id, active: false) %></div>
+        <%else%>
+            <div class="activation right"><%=link_to 'Activate', preferences_update_path(id: p.id, active: true)%></div>
+        <%end%>
+        <div class="description center"><%=p.application.description%></div>
+        <div class="link center"><%=link_to p.application.name, p.application.link%></div>
+      </div>
+    <%end%>
+  <% end %>
+</div>

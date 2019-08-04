@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'preferences/edit'
+  get 'preferences/update'
 
   get 'sessions/new'
 
