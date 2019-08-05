@@ -12,6 +12,7 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'acts_as_list'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
