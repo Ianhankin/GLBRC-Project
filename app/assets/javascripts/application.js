@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require jquery
 //= require jquery-ui
+//= require preferences
 //= require_tree .

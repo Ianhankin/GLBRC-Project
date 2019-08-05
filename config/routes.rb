@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   get 'preferences/edit'
   get 'preferences/update'
+  resources :preferences do
+    collection do
+      patch :sort
+    end
+  end
 
   get 'sessions/new'
 

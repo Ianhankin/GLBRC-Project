@@ -1,11 +1,11 @@
-<div class="btn right"><%=link_to 'Add more to home', preferences_edit_path%></div>
+<div class="btn right"><%=link_to 'Add, Remove, and Sort Apps', preferences_edit_path%></div>
 <h1 class="center">Home Page</h1>
 <div class="apps">
-  <% Preference.all.each do |p|%>
+  <% Preference.all.order(:position).each do |p|%>
     <%if p.user_id==current_user.id && p.active%>
       <div class="app_box" style=<%="background-color:#{p.application.color.downcase}"%>>
-        <div class="description center"><%=p.application.description%></div>
         <div class="link center"><%=link_to p.application.name, p.application.link%></div>
+        <div class="description center"><%=p.application.description%></div>
       </div>
     <%end%>
   <% end %>
