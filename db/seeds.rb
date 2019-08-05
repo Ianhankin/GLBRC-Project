@@ -24,9 +24,7 @@ Application.create!(name: "Twitter", description: "Twitter", color: "Purple",
   
 
 User.all.each do |user|
-  int i = 1
   Application.all.each do |app|
-    Preference.create(user_id: user.id, application_id: app.id, active: app.default, position: i)
-    i=i+1
+    Preference.create(user_id: user.id, application_id: app.id, active: app.default)
   end
 end
